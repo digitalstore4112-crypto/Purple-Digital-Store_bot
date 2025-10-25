@@ -73,8 +73,8 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_states[user.id] = "awaiting_name"
 
     text = (
-        "🟣 <b>Purple Digital Store\n"
-        " ငွေဖြည့် Bot မှ ကြိုဆိုပါတယ်</b> 🎉\n\n"
+        "Purple Digital Store\n"
+        "ငွေဖြည့် Bot မှ ကြိုဆိုပါတယ်</b> 🎉\n\n"
         "စတင်ရန်၊ သင့် Website\n"
         "အသုံးပြုသူအမည်ကို ပေးပို့ပါ။\n\n"
         "🔁 Bot ကို အစမှ ပြန်စချင်ပါက\n"
@@ -95,7 +95,7 @@ async def register_name(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     text = (
         f"✅ <b>အဆင်ပြေပါပြီ!</b>\n\n"
-        f"သင့်အသုံးပြုသူအမည် <b>“{name}”</b> သည် သင့် Telegram အကောင့်နှင့်\n"
+        f"သင့်အသုံးပြုသူအမည် <b>“{name}”</b> သည် သင့် ငွေဖြည့်အကောင့်နှင့်\n"
         f" ချိတ်ဆက်ပြီးပါပြီ။\n\n"
         "ဆောင်ရွက်လိုသောအရာကို ရွေးချယ်ပါ 👇\n\n"
         "🔁 Bot ကို အစမှ ပြန်စချင်ပါက /start ဟု ပို့ပါ။"
@@ -138,7 +138,7 @@ async def handle_buttons(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "💰 ငွေချေရမည့်အချက်အလက်များ\n"
             "📱 09451266782\n"
             "👤 Mya Sandar\n\n"
-            "💡 ငွေချေပြီးပါက ငွေပမာဏ (ဥပမာ 4000) သို့မဟုတ်\n"
+         
             " 📸 Screenshot ပေးပို့ပါ။\n",
             parse_mode="HTML",
         )
@@ -163,18 +163,22 @@ async def payment_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
             f"👤 Name: {name}"
         )
         await context.bot.send_photo(chat_id=ADMIN_ID, photo=file_id, caption=caption)
+
         await update.message.reply_text(
-            f"🔄 သင့်ငွေဖြည့်တောင်းဆိုမှုကို\n"
-            f" စစ်ဆေးနေပါပြီ။ စစ်ပြီး ငွေထည့်ပြီးပါက စာပြန်ပိုပေးပါမည်။\n\n"
-            
-            f"📋 ငွေဖြည့်အမှတ်: {order_id}\n"
-            f"👤 အသုံးပြုသူအမည်: {name}\n\n"
-            "purpledigitalstore.com ကို\n"
-            " အသုံးပြုသည့်အတွက် ကျေးဇူးတင်ပါသည် 🎉\n\n"
-            "📸 ဓာတ်ပုံ (screenshot) လက်ခံပြီး Admin သို့ auto-forward\n"
-            " ပြုလုပ်ပြီးပါပြီ။\n",
-            parse_mode="HTML"
-        )
+    f"🔄 သင့်ငွေဖြည့်တောင်းဆိုမှုကို\n"
+        f" စစ်ဆေးနေပါပြီ။ စစ်ပြီး ငွေထည့်ပြီးပါက \n"
+        f"စာပြန်ပိုပေးပါမည်။\n\n"
+        f"📋 ငွေဖြည့်အမှတ်: {order_id}\n"
+        f"👤 အသုံးပြုသူအမည်: {name}\n\n"
+        "purpledigitalstore.com ကို\n"
+        "အသုံးပြုသည့်အတွက် အထူးကျေးဇူးတင်ပါ\n"
+        "သည် 🎉\n\n"
+        "📸 ဓာတ်ပုံ (Screenshot)\n "
+        "Admin သို့ auto-forward ပြုလုပ်ပြီးပါပြီ။\n",
+         parse_mode="HTML"
+            )
+
+
         return
 
     # AMOUNT Handler
@@ -214,5 +218,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
