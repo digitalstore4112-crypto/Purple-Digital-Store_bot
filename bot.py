@@ -188,7 +188,7 @@ async def payment_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "purpledigitalstore.com ကို\n"
             "အသုံးပြုသည့်အတွက် ကျေးဇူးတင်ပါသည် 🎉\n\n"
             "📸 ဓာတ်ပုံ (screenshot) လက်ခံပြီး\n"
-            Admin သို့ auto-forward ပြုလုပ်ပြီးပါပြီ။\n",
+            "Admin သို့ auto-forward ပြုလုပ်ပြီးပါပြီ။\n",
             parse_mode="HTML",
         )
 
@@ -243,3 +243,4 @@ async def main():
 if __name__ == "__main__":
     # run the async main safely
     asyncio.run(main())
+
