@@ -2,6 +2,8 @@
 Purple Digital Store - ငွေဖြည့် Bot (📊 ဖယ်ပြီး | ငွေပမာဏ + Screenshot လက်ခံနိုင်)
 python-telegram-bot==21.6
 """
+import os
+TOKEN = os.getenv("7664363867:AAHaVrLGHUx_GfWtHDjNSuZtQohGk5LwNAY")
 
 import sqlite3
 import random
@@ -214,3 +216,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
